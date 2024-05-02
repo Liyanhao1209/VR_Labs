@@ -24,6 +24,8 @@ public class DemandDisplayUI : MonoBehaviour
         }
     }
 
+    // 通过实际根节点的首个食材判断应该在展示UI的地方贴什么图
+    // 例如，第一个节点的Name属性是“纸盒”，那么很显然贴一张纸盒冰淇淋的图片
     public void OnShow(List<DemandNode>[] products)
     {
         gameObject.SetActive(true);

@@ -53,13 +53,13 @@ public class CustomerCtr : MonoBehaviour
 
     void OnArrivdVisitEndPos(Customer cus)
     {
-        GameControl.CustomerVisit(cus);
+        GameControl.CustomerVisit(cus); // 顾客开始购买，生成需求
         cus.EndEvent -= OnArrivdVisitEndPos;
     }
 
     void OnArrivdWaitEndPos(Customer cus)
     {
-        cus.QueueWaiting();
+        cus.QueueWaiting(); // 在队列里站着
         cus.EndEvent -= OnArrivdWaitEndPos;
     }
 
@@ -112,6 +112,7 @@ public class CustomerCtr : MonoBehaviour
 
     }
 
+    // 顾客队列整体前移
     public void QueueMove()
     {
         waitList.RemoveAt(waitList.Count - 1);
