@@ -257,7 +257,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/Administrator/Desktop/college/junior2/vr/labs/software/PICO Unity Integration SDK_250",
+      "version": "file:D:/unityhub/plug-in/PICO Unity Integration SDK_250",
       "depth": 0,
       "source": "local",
       "dependencies": {

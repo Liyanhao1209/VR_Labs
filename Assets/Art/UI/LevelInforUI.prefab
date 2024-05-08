@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 2379352302580981120}
   - component: {fileID: 7178816247569424371}
   m_Layer: 5
-  m_Name: tagett (1)
+  m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 8361747071956296398}
   - component: {fileID: 6061694808216773662}
   m_Layer: 5
-  m_Name: tagett
+  m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

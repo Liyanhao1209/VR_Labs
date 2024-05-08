@@ -13,7 +13,7 @@ public class DialogUI : MonoBehaviour
     Button deliveryBtn;
     float patienceTime;
     int patience;
-    private void Start()
+    private void Awake()
     {
         dialogText = transform.GetChild(0).gameObject.GetComponent<Text>();
         countDownText = transform.GetChild(1).gameObject.GetComponent<Text>();

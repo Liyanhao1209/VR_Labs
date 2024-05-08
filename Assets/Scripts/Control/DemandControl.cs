@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Metadata;
+//using static Unity.VisualScripting.Metadata;
 
 public static class DemandControl 
 {
@@ -62,7 +62,7 @@ public static class DemandControl
     // 为一个用户创建需求
     public static List<DemandNode>[] CreateDemandProduct()
     {
-        int childProdectCount = Random.Range(1, 4);
+        int childProdectCount = Random.Range(2, 4);
         List<DemandNode>[] products = new List<DemandNode>[childProdectCount];
         for (int i = 0; i < childProdectCount; i++)
         {

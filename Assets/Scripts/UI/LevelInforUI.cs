@@ -9,8 +9,9 @@ public class LevelInforUI : MonoBehaviour
     Text targetValue;
     Text incomeValue;
     Text title;
-    void Start()
+    void Awake()
     {
+        Debug.Log("start");
         // 通过组件属性反解析文本值
         levelTimeValue = transform.Find("Time/target").GetComponent<Text>();
         targetValue = transform.Find("Target/target").GetComponent<Text>();

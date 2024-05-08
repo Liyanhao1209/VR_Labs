@@ -6,7 +6,7 @@ public class CustomerCtr : MonoBehaviour
 {
     GameObject[] customerPrefabs;
 
-    List<Customer> customerQueue;
+    public List<Customer> customerQueue;
 
     public Transform[] movePath;
     public Transform[] excessivePath;
@@ -107,14 +107,15 @@ public class CustomerCtr : MonoBehaviour
 
     public void RemoveFirstsCustome()
     {
+        if (customerQueue.Count == 0) { return; }
         customerQueue[0].Leave();
         customerQueue.RemoveAt(0);
-
     }
 
     // 顾客队列整体前移
     public void QueueMove()
     {
+        if (waitList.Count == 0) { return;  }
         waitList.RemoveAt(waitList.Count - 1);
         customerQueue[0].ClearnEvent();
 

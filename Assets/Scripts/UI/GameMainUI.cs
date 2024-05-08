@@ -11,6 +11,6 @@ public class GameMainUI : MonoBehaviour
         // 一开始的界面，开始或者退出
         Button[] buttons = GetComponentsInChildren<Button>();
         buttons[0].onClick.AddListener(() => { GameControl.StartGame(); });
-        buttons[0].onClick.AddListener(() => { Application.Quit(); });
+        //buttons[1].onClick.AddListener(() => { Application.Quit(); });
     }
 }

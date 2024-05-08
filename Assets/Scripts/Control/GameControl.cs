@@ -23,6 +23,7 @@ public class GameControl
     private static LevelRequireInfor currentLevelInfor;
     private static int incomeCount;
     private static bool levelRunning;
+    public int baseTime = 50;
 
     public static void DataInit()
     {
@@ -30,9 +31,9 @@ public class GameControl
         DemandControl.BuildDemandGraphic();
         allLevelRequire = new LevelRequireInfor[]
         {
-            new LevelRequireInfor(){level =1, time =200,target = 80,interval = 20},
-            new LevelRequireInfor(){level =2, time =150,target = 160,interval =15},
-            new LevelRequireInfor(){level =3, time =180,target = 200,interval = 10 },
+            new LevelRequireInfor(){level =1, time = 50,target = 10,interval = 20},
+            new LevelRequireInfor(){level =2, time = 80,target = 30,interval =15},
+            new LevelRequireInfor(){level =3, time = 100,target = 80,interval = 10 },
         };
     }
 
@@ -62,7 +63,14 @@ public class GameControl
         currentLevelInfor.time -= Time.deltaTime;
         UIM.LevelInforUI.RefreshLevelTime((int)currentLevelInfor.time); // 刷新屏幕中显示的剩余时间
         if (currentLevelInfor.time < 0)
+        {
             CheckPerformance(); // 本关卡结束时，检查关卡状态
+            int count = CustomerCtr.customerQueue.Count;
+            for (int i = 0;i < count;i++)
+            {
+                CustomerCtr.customerQueue[i].Leave();
+            }
+        }
     }
 
     private static void CheckPerformance()
